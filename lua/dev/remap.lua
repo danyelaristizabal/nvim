@@ -1,7 +1,8 @@
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- netwrc vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.api.nvim_set_keymap('n', '<leader>pv', ':Oil<CR>', {noremap = true, silent = true})
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -18,6 +19,12 @@ end)
 vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
+
+-- terminal 
+vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', {noremap = true, silent = true})
+
+-- copilotChat 
+vim.api.nvim_set_keymap('n', '<leader>cp', ':CopilotChat<CR>', {noremap = true, silent = true})
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])

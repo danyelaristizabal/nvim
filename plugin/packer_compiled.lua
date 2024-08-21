@@ -204,6 +204,11 @@ _G.packer_plugins = {
     path = "/Users/danyelaristizabal/.local/share/nvim/site/pack/packer/start/octo.nvim",
     url = "https://github.com/pwntester/octo.nvim"
   },
+  ["oil.nvim"] = {
+    loaded = true,
+    path = "/Users/danyelaristizabal/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/danyelaristizabal/.local/share/nvim/site/pack/packer/start/packer.nvim",

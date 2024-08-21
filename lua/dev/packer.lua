@@ -11,10 +11,13 @@ return require('packer').startup(function(use)
 -- Extra go functionality 
 use {
   "olexsmir/gopher.nvim",
-  requires = { -- dependencies
+  requires = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "mfussenegger/nvim-dap", -- (optional) only if you use `gopher.dap`
   },
+  -- (optional) will update plugin's deps on every update
+  run = ":GoInstallDeps",
 }
 
 -- fuzy finder 
@@ -92,7 +95,8 @@ use{ 'rcarriga/nvim-dap-ui',
             'Samsung/netcoredbg', 
         } 
     }
-    
+-- File manager    
+use "stevearc/oil.nvim"
 -- LSP 
 use {	'VonHeikemen/lsp-zero.nvim',
 	branch = 'v3.x',
@@ -111,13 +115,5 @@ use {	'VonHeikemen/lsp-zero.nvim',
 	}
 }
 
-  use({
-    "stevearc/oil.nvim",
-    config = function()
-      require("oil").setup()
-    end,
-  })
-
+    
 end)
-
-
