@@ -1,1 +1,1 @@
-require("Dev")
+require("Config")

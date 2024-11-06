@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 
 -- netwrc vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Oil<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gu', ':r !uuidgen<CR>0v$y', { noremap = true, silent = true })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -26,11 +27,13 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', {noremap = true, sile
 -- copilotChat 
 vim.api.nvim_set_keymap('n', '<leader>cp', ':CopilotChat<CR>', {noremap = true, silent = true})
 
--- greatest remap ever
+-- paste and copy again to buffer  
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- next greatest remap ever : asbjornHaland
+-- next greatest remap ever : copy to clipboard (took me 4 months to understand it)
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+
+-- next greatest remap ever : not sure what it does 
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])

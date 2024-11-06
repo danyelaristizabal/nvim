@@ -21,4 +21,4 @@ end)
 
 require('lspconfig').csharp_ls.setup({})
 require('lspconfig').gopls.setup{}
-require('lspconfig').tsserver.setup{}
+require('lspconfig').ts_ls.setup{}
