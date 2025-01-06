@@ -20,5 +20,12 @@ end)
 
 
 require('lspconfig').csharp_ls.setup({})
-require('lspconfig').gopls.setup{}
+require('lspconfig').gopls.setup{
+  cmd = {"gopls", "serve"},
+  settings = {
+    gopls = {
+      buildFlags = {"-tags=prod dev"}
+    }
+  }
+}
 require('lspconfig').ts_ls.setup{}
